@@ -8,6 +8,7 @@
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 <GridPane fx:controller="sample.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 
@@ -28,10 +29,29 @@
         <center>
             <TableView fx:id="turnList">
                 <columns>
-                    <TableColumn text="Nr"></TableColumn>
-                    <TableColumn text="Guess"></TableColumn>
-                    <TableColumn text="Cows"></TableColumn>
-                    <TableColumn text="Bulls"></TableColumn>
+                    <TableColumn text="Nr">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="turnNr"></PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Guess">
+                        <cellValueFactory>
+                        <PropertyValueFactory property="userGuess"></PropertyValueFactory>
+                    </cellValueFactory>
+                    </TableColumn>
+
+
+
+                    <TableColumn text="Cows">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="cows"></PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="Bulls">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="Bulls"></PropertyValueFactory>
+                        </cellValueFactory>
+                    </TableColumn>
                 </columns>
 
             </TableView>
